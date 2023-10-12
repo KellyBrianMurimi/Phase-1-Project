@@ -22,7 +22,7 @@ Application works fine
 ## Technologies used
 -Javascript
 -HTML and CSS
--Boostrap
+
 
 #### Support and contact details
 -email ::kellybrianmurimi@gmail.com
