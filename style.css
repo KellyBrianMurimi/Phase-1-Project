@@ -1,0 +1,44 @@
+body{
+    width: 65%;
+    background-color: white;
+    margin: auto;
+}
+#container{
+    display: flex;
+    gap: 5px;
+}
+#container #all_watches{
+    display: flex;
+    padding: 5px;
+    width: 60%;
+    background-color: aqua;
+}
+#card {
+    height: 50vh;
+    width: 50%;
+    border: 3px solid blue;
+}
+#card img{
+    width: 100%;
+    height: 30vh;
+
+}
+#card img hover{
+    cursor: pointer;
+}
+#container #single_watch{
+    width: 40%;
+    background-color: aqua;
+}
+#single_watch img{
+    width: 100%;
+}
+#deleteBtn{
+    display: block;
+    background-color: red;
+    border: none;
+    color: white;
+}
+#deleteBtn:hover{
+    cursor: pointer;
+}
