@@ -1,4 +1,4 @@
-//fetching data
+// fetching data
 fetch("http://localhost:3000/watches", {
     method: "GET"
 })
@@ -6,7 +6,7 @@ fetch("http://localhost:3000/watches", {
 .then((data) => {
     console.log(data);
     const all_watches = document.getElementById("all_watches");
-    all_watches.innerHTML ='';//Clear the container before adding new content
+    all_watches.innerHTML = ''; // Clear the container before adding new content
     for (const element of data) {
         all_watches.innerHTML += `<div id="card">
             <img onclick="displaySingleWatch(${element.id})" src="${element.image}" alt="${element.name}">
@@ -72,8 +72,8 @@ addForm.addEventListener("submit", function(event) {
 });
 
 // Edit function
-function edit(id) {
-    console.log(id);
+function edit() {
+    //console.log(id);
     fetch(`http://localhost:3000/watches/${id}`)
     .then((response) => response.json())
     .then((res) => {
@@ -86,7 +86,7 @@ function edit(id) {
                 <input type="text" id="update_description" value="${res.description}" placeholder="Enter description">
                 <input type="text" id="update_image_url" value="${res.image}" placeholder="Enter image url">
                 <button onclick="update(${id})" type="submit">Update</button>
-            </div>`;
+            </div>`
     });
 }
 
@@ -107,8 +107,8 @@ function update(id) {
             description: update_description
         }),
     })
-    .then((response) => {
-        // Handle the response if needed
-    });
-}
-
+    .then((response) => response.json())
+    .then((data)=> {
+        alert("Watch updated")
+    })
+    }
