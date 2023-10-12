@@ -72,8 +72,8 @@ addForm.addEventListener("submit", function(event) {
 });
 
 // Edit function
-function edit() {
-    //console.log(id);
+function edit(id) {
+    // Fetch the data for the specific watch by its ID
     fetch(`http://localhost:3000/watches/${id}`)
     .then((response) => response.json())
     .then((res) => {
@@ -85,8 +85,8 @@ function edit() {
                 <input type="text" id="update_name" value="${res.name}" placeholder="Enter name">
                 <input type="text" id="update_description" value="${res.description}" placeholder="Enter description">
                 <input type="text" id="update_image_url" value="${res.image}" placeholder="Enter image url">
-                <button onclick="update(${id})" type="submit">Update</button>
-            </div>`
+                <button onclick="update(${id})" type="button">Update</button>
+            </div>`;
     });
 }
 
@@ -96,6 +96,7 @@ function update(id) {
     const update_description = document.getElementById("update_description").value;
     const update_image_url = document.getElementById("update_image_url").value;
 
+    // Send an HTTP request to update the watch data
     fetch(`http://localhost:3000/watches/${id}`, {
         method: "PATCH",
         headers: {
@@ -103,12 +104,12 @@ function update(id) {
         },
         body: JSON.stringify({
             name: update_name,
-            image: update_image_url,
-            description: update_description
+            description: update_description,
+            image: update_image_url
         }),
     })
     .then((response) => response.json())
-    .then((data)=> {
-        alert("Watch updated")
-    })
-    }
+    .then((data) => {
+        alert("Watch updated");
+    });
+}

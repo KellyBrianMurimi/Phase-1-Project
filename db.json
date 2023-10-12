@@ -1,0 +1,16 @@
+{
+  "watches": [
+    {
+      "id": 1,
+      "name": "Samsung Galaxy",
+      "description": "Weight 59 g (47mm), 1.5 inches Super AMOLED display, Exynos W930 chipset, 2GB RAM, 16GB storage, Bluetooth v5.3, 425mAh battery and Qi Wireless charging",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTPLNLPwk0qcU7m53TclFXgzNCmLJ70E6EWFnFNEHT8pl6drWZLtoup1oz8LOX3SrpV5scHFLgp6KjIjubAL6Ie1OvSvwMmSjq9oBcHMSRcB95XnbRXeB9LSzAzRFCFGcpp1UexZQY&usqp=CAc"
+    },
+    {
+      "id": 2,
+      "name": "POEDAGAR",
+      "description": "This POEDAGAR Mens Watch is high-quality timepiece that blends form and function. It has auto date/day display and can be adjusted to fit someone’s wrist,  Its design, construction, and features may make it a reliable and stylish choice for everyday wear or special occasions.",
+      "image": "https://riogiftshop.com/wp-content/uploads/2023/04/High-Quality-Men-Watches-9-900x900.jpg"
+    }
+  ]
+}
