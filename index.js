@@ -1,5 +1,5 @@
 // fetching data
-fetch("http://localhost:3000/watches", {
+fetch("https://javascript-6npe.onrender.com/watches", {
     method: "GET"
 })
 .then((response) => response.json())
@@ -20,7 +20,7 @@ fetch("http://localhost:3000/watches", {
 // function for displaying singleWatch
 function displaySingleWatch(id) {
     console.log(id);
-    fetch(`http://localhost:3000/watches/${id}`, {
+    fetch(`https://javascript-6npe.onrender.com/watches/${id}`, {
         method: "GET"
     })
     .then((response) => response.json())
@@ -36,7 +36,7 @@ function displaySingleWatch(id) {
 
 // Function for deleting watches
 function deleteWatch(id) {
-    fetch(`http://localhost:3000/watches/${id}`, {
+    fetch(`https://javascript-6npe.onrender.com/watches/${id}`, {
         method: "DELETE"
     })
     .then((response) => response.json())
@@ -54,7 +54,7 @@ addForm.addEventListener("submit", function(event) {
     const image_url = document.getElementById("image_url").value;
     console.log(name, description, image_url);
 
-    fetch('http://localhost:3000/watches', {
+    fetch('https://javascript-6npe.onrender.com/watches', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ addForm.addEventListener("submit", function(event) {
 // Edit function
 function edit(id) {
     // Fetch the data for the specific watch by its ID
-    fetch(`http://localhost:3000/watches/${id}`)
+    fetch(`https://javascript-6npe.onrender.com/watches/${id}`)
     .then((response) => response.json())
     .then((res) => {
         console.log(res);
@@ -97,7 +97,7 @@ function update(id) {
     const update_image_url = document.getElementById("update_image_url").value;
 
     // Send an HTTP request to update the watch data
-    fetch(`http://localhost:3000/watches/${id}`, {
+    fetch(`https://javascript-6npe.onrender.com/watches/${id}`, {
         method: "PATCH",
         headers: {
             'Content-Type': 'application/json',
