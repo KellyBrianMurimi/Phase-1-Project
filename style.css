@@ -58,7 +58,7 @@ body{
 }
 #card img{
     width: 100%;
-    height: 30vh;
+    max-height: 30vh;
 
 }
 #card img:hover{
@@ -70,6 +70,7 @@ body{
 }
 #single_watch img{
     width: 100%;
+    max-height: 100%;
 }
 #deleteBtn{
     display: block;
@@ -86,7 +87,7 @@ body{
     text-align: center;
     padding: 10px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
 }
